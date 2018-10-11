@@ -1,7 +1,10 @@
-const person = {
-  name: 'Kosta'
+function getFlags(re) {
+  var text = re.toString();
+  text.substring()
+  return text.substring(text.lastIndexOf("/") + 1);
 }
 
-person.name = 'Pesho'
+// toString() is "/ab/g"
+var re = /ab/giu;
 
-console.log(person.name)
+console.log(getFlags(re));  

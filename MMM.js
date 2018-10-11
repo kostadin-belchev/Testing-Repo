@@ -43,12 +43,15 @@
 ///////////////////////////////////////////////////////////////////////////
 const roundValue = ({ value, roundTo = 6 }) => {
   if (value != null) {
+    const isNumeric = val => !Number.isNaN(Number.parseFloat(val)) && isFinite(val)
+    
     const floatingNumber = value.toString().split('.')[1]
 
     return floatingNumber && floatingNumber.length > roundTo && isNumeric(value)
       ? Math.round(value * 10 ** roundTo) / 10 ** roundTo
       : value
-  }   
+    }   
 }
+
 
 console.log(roundValue({value: 3.333, roundTo: 2}))
