@@ -37,6 +37,9 @@ console.log(localValue)
 
 let colors = [ "red", [ "green", "lightgreen" ], "blue" ];
 
+let [...clonedColors] = colors
+console.log(clonedColors)
+
 // later
 
 let [ firstColor, [ secondColor, thirdColor, fourthColor = 'purple' ], sixthColor ] = colors;
