@@ -8,9 +8,10 @@ let inc = createIncrement(10)
 console.log(inc(2));
 
 
-for (const key in object) {
-    if (Object.prototype.hasOwnProperty.call(object, key)) {
-        const element = object[key];
-        
-    }
-}
+const array = [1, 2, 3]
+
+array.forEach((element, index) => {
+    array[index] = element * 2
+});
+
+array

@@ -1,27 +1,12 @@
-let z = 10
-function add(x, y) {
-  return x + y
-}
+// const add = (x, y) => x + y
+const add = x => y => x + y
 
-const solve = () => {
-  let acc = 0
-  for (let i = 1; i <= 10; i++) {
-    acc += i
-  }
-  acc
-}
+let mult5 = value => value * 5
 
-solve()
+// let mult5AfterAdd10 = y => mult5(add(10, y))
 
-function sumRange(start, end, acc) {
-  if (start > end) {
-    return acc
-  }
-  return sumRange(start + 1, end, acc + start)
-}
+const compose = (f, g) => x => f(g(x))
 
-console.log(sumRange(1, 10, 0))
+const mult5AfterAdd10 = compose(mult5, add(10))
 
-
-
-
+console.log(mult5AfterAdd10(2))
